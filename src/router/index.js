@@ -18,7 +18,6 @@ const unauthorized = () => import("@/views/401");
 // 404
 const notfound = () => import("@/views/404");
 
-const config = () => import("@/views/config");
 const mjtask = () => import("@/views/mjtask");
 const mjkeys = () => import("@/views/mjkeys");
 const users = () => import("@/views/users");
@@ -87,15 +86,6 @@ const router = new Router({
             needLogin: true,
           },
           component: users,
-        },
-        {
-          path: "config",
-          name: "config",
-          meta: {
-            title: "基础设置",
-            needLogin: true,
-          },
-          component: config,
         },
       ],
     },

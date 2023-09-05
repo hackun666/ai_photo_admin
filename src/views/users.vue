@@ -6,7 +6,7 @@
                 <el-table-column prop="id" width="80" label="用户ID" align="center"></el-table-column>
                 <el-table-column prop="username" label="用户名" align="center"></el-table-column>
                 <el-table-column prop="email" label="邮箱" align="center"></el-table-column>
-                    <el-table-column prop="ip" label="注册IP" align="center"></el-table-column>
+                <el-table-column prop="ip" label="注册IP" align="center"></el-table-column>
                 <el-table-column align="center" property="time" :formatter="dateFormat" label="注册时间"></el-table-column>
             </el-table>
             <div class="pagination-wrap">
@@ -38,7 +38,7 @@ export default {
         this.getData();
     },
     methods: {
-        
+
         async getData() {
             let res = await this.$http.get("/api/info/userlist", {
                 token: localStorage.ai_token,
